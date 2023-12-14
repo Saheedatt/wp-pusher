@@ -19,8 +19,8 @@ A practice website in preparation for our first semester exam at AltSchool Afric
 
 Users should be able to:
 
-- View the optimal layout for the site depending on their device's screen size.
-- The site should be fully responsive
+- View the optimal layout for the site on larger screens
+- It was not to be made responsive.
 
 ### Screenshot
 
@@ -39,7 +39,6 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
 
 
 ### What I learned
