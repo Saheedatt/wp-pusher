@@ -50,12 +50,21 @@ nav{
 .links > :not(:first-child){
     margin-left: 20px;
 }
+nav .nav-links li:hover {
+    color: #038E7D; 
+}
 .button{
     border: 2px solid #646E7A;
     border-radius: 6px;
     text-align: center;
     padding-block: 11px;
     padding-inline: 16px;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+.button:hover, .button:focus {
+    background-color: #038E7D;
+    color: #fff;
+    border: none;
 }
 .line{
     border: 1px solid #e0e6ea;
@@ -67,13 +76,19 @@ main{
     padding-inline: 200px;
     padding-block: 40px;
 }
-/* I couldn't get the skip navigation to work */
-.skip-navigation:not(:focus):not(:active) {
-    display: none;
+.skip-navigation {
+    position: absolute;
+    left: -9999px;
 }
+
 .skip-navigation:focus,
 .skip-navigation:active {
-    display: inline; 
+    position: relative;   
+    left: 0;
+    top: 0;
+    background-color: grey;
+    color: #000;
+    padding-block: 5px;
 }
 .checkout-section{
     display: grid;
@@ -101,6 +116,7 @@ main{
     align-items: center;
     gap: 7px;
     padding-inline-start: 30px;
+    padding-block-end: 18px;
 
     > .info{
         max-width: 300px;
@@ -155,14 +171,36 @@ form .contact{
         padding-block-start: 10px;
     }
 }
-form .card{
-    padding-block-start: 20px;
+.credit-card{
+    width: 100%;
+    background-color: #edeff2;
+    margin-block-start: 7px;
 
-    > .detail{
-        display: flex;
-        flex-direction: column;
-        padding-block-start: 10px;
+    > label{
+        display: block;
     }
+    > .card-no, .card-expiration{
+        width: 154px;
+    }
+    > .card-no{
+        margin-inline-end: 95px;
+    }
+    > .card-cvc{
+        width: 42px;
+        margin-inline-start: 15px;
+    }
+    > .card-expiration, .card-cvc{
+        text-align: right;
+    }
+}
+.credit-card{
+    margin-top: 9px;
+    margin-bottom: 10px;
+    height: 36px;
+    border-radius: 3px;
+}
+.credit{
+    margin-inline-end: 48px;  
 }
 form label{
     font-weight: 400;
@@ -179,9 +217,6 @@ form input{
 form .contact input{
     width: 60%;
 } 
-form .card input{
-    width: 100%;
-}
 form input::placeholder{
     padding-inline-start: 10px;
     line-height: 16.8px;
@@ -209,6 +244,10 @@ form input::placeholder{
     color: #ffffff;
     border-radius: 6px;
     border: none;
+    transition: background-color 0.3s ease;
+}
+.submit button:hover {
+    background-color: #046b61;
 }
 .support{
     display: flex;

@@ -76,13 +76,13 @@
                             <h3>Your Payment Information</h3>
                         </div>
                     </div>
-                    <form action="#">
-                        <div class="card">
-                            <div class="detail">
-                                <label for="card number">Credit Card</label>   
-                                <input id="number" type="number" class="email" placeholder="Card Number MM/YY CVC" aria-placeholder="Enter your credit card details" required>
-                            </div>
-                        </div>
+                    <form class="credit">
+                             <label for="card-number">Credit Card</label>
+                             <div class="credit-card">
+                            <input id="number" type="number" pattern="[0-9]*" class="card-no" placeholder="Card Number" aria-placeholder="Enter your credit card details" required>
+                            <input placeholder="MM / YY" pattern="[0-9]*" type="text" class="card-expiration" id="card-expiration">
+                            <input placeholder="CVC" pattern="[0-9]*" type="text" class="card-cvc" id="card-cvc">
+                            </div>   
                     </form>
                     </div>
                     </div>
@@ -90,7 +90,7 @@
                         <div class="payment-section">
                             <div class="submit">
                                 <button type="submit" aria-roledescription="Buy WP Pusher button">Buy WP Pusher</button>
-                            </div>
+                            </div> 
                             <div class="support">
                                 <img src="images/Mask.svg">
                                 <p><span>Need any help?</span> Don’t hesitate to <a href="#">contact</a> support!</p>
